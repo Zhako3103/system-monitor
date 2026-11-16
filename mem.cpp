@@ -179,8 +179,7 @@ void renderMemoryWindow(ImVec2 pos, ImVec2 size) {
             if (g_filter.PassFilter(p.name.c_str())) rows.push_back(&p);
 
         ImGuiTableFlags flags = ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg |
-                                ImGuiTableFlags_Resizable | ImGuiTableFlags_ScrollY |
-                                ImGuiTableFlags_SizingStretchProp;
+                                ImGuiTableFlags_Resizable | ImGuiTableFlags_ScrollY;
         float h = ImGui::GetContentRegionAvail().y - 4.0f;
         if (h < 80.0f) h = 80.0f;
         if (ImGui::BeginTable("##procs", 5, flags, ImVec2(0.0f, h))) {

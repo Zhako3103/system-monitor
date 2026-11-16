@@ -89,8 +89,7 @@ void renderNetworkWindow(ImVec2 pos, ImVec2 size) {
     ImGui::Spacing();
 
     if (ImGui::TreeNode("network table")) {
-        ImGuiTableFlags flags = ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg |
-                                ImGuiTableFlags_SizingStretchSame;
+        ImGuiTableFlags flags = ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg;
         ImGui::Text("RX");
         if (ImGui::BeginTable("##rx", 9, flags)) {
             const char* cols[9] = {"interface", "bytes", "packets", "errs", "drop",

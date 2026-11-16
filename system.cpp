@@ -207,7 +207,7 @@ static void drawGraph(GraphState& g, const char* id, const char* label,
     float h = ImGui::GetContentRegionAvail().y - 6.0f;
     if (h < 100.0f) h = 100.0f;
     ImGui::PlotLines("##plot", g.values.data(), (int)g.values.size(), g.offset,
-                     overlay, 0.0f, g.yMax, ImVec2(-1.0f, h));
+                     overlay, 0.0f, g.yMax, ImVec2(ImGui::GetContentRegionAvail().x - 4.0f, h));
     ImGui::PopID();
 }
 
